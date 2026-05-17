@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet build *)",
+      "Bash(npm run *)",
+      "Bash(git reset *)",
+      "Bash(powershell -NoProfile -Command \"New-Item -ItemType Directory -Path 'src\\\\shared\\\\api' -Force | Out-Null; Move-Item -Path 'src\\\\services\\\\api.js' -Destination 'src\\\\shared\\\\api\\\\axios.js'\")",
+      "Bash(powershell -NoProfile -Command ' *)",
+      "PowerShell(Get-ChildItem -Path 'src' -Recurse -Directory | Select-Object -ExpandProperty FullName | ForEach-Object { $_.Replace\\(\\(Get-Location\\).Path + '\\\\', ''\\) })"
+    ]
+  }
+}

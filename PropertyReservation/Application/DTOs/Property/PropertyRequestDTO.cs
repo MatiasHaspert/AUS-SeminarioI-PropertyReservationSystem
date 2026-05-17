@@ -1,0 +1,67 @@
+﻿using Domain.Entities;
+using Domain.ValueObjects;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Application.DTOs.Property
+{
+    public class PropertyRequestDTO
+    {
+        [Required(ErrorMessage = "El título es obligatorio.")]
+        public string Title { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "El precio por noche es obligatorio.")]
+        [Range(0.01, double.MaxValue, ErrorMessage = "El precio por noche debe ser mayor que cero.")]
+        public decimal NightlyPrice { get; set; }
+
+        [Required(ErrorMessage = "La capacidad de huéspedes es obligatoria.")]
+        [Range(1, int.MaxValue, ErrorMessage = "La capacidad de huéspedes debe ser al menos 1.")]
+        public int MaxGuests { get; set; }
+
+        [Required(ErrorMessage = "La cantidad de habitaciones es obligatoria.")]
+        [Range(0, int.MaxValue, ErrorMessage = "La cantidad de habitaciones debe ser un número positivio.")]
+        public int Bedrooms { get; set; }
+
+        [Required(ErrorMessage = "La cantidad de baños es obligatoria.")]
+        [Range(0, int.MaxValue, ErrorMessage = "La cantidad de baños debe ser un número positivio.")]
+        public int Bathrooms { get; set; }
+
+        // Address properties flattened
+        [Required(ErrorMessage = "La ciudad es obligatoria.")]
+        [MaxLength(100, ErrorMessage = "La ciudad no puede exceder los 100 caracteres.")]
+        public string City { get; set; } = string.Empty;
+        
+        [Required(ErrorMessage = "La provincia es obligatoria.")]
+        [MaxLength(100, ErrorMessage = "La provincia no puede exceder los 100 caracteres.")]
+        public string State { get; set; } = string.Empty;
+        
+        [Required(ErrorMessage = "El país es obligatorio.")]
+        [MaxLength(100, ErrorMessage = "El país no puede exceder los 100 caracteres.")]
+        public string Country { get; set; } = string.Empty;
+        
+        [Required(ErrorMessage = "La dirección es obligatoria.")]
+        [MaxLength(200, ErrorMessage = "La dirección no puede exceder los 200 caracteres.")]
+        public string StreetAddress { get; set; } = string.Empty;
+        
+        [Required(ErrorMessage = "El código postal es obligatorio.")]
+        [Range(1, 99999, ErrorMessage = "El código postal debe estar entre 1 y 99999.")]
+        public int PostalCode { get; set; }
+
+        [MinLength(0, ErrorMessage = "La descripción debe tener al menos 0 caracteres.")]
+        [MaxLength(3000, ErrorMessage = "La descripción no puede exceder los 3000 caracteres.")]
+        public string Description { get; set; } = string.Empty;
+
+        // Ver cómo tomarlo del usuario que está creando la propiedad.
+        // public int OwnerId { get; set; } Tomado desde la request actual del usuario autenticado
+
+        // Luego vemos como manejar los Amenities, me imagino que en el fron podamos acceder a la lista de amenities y pasar el id para hacer el request
+        public ICollection<int> AmenityIds { get; set; } = new List<int>();
+
+        // Acá me imagino que en el formulario de propiedades, al cargar una imagen se crea la misma y nos deja el id para hacer el request y asignarlo
+
+        // Me parece que al momento de cargar una imagen ya se crea y se asocia a la propiedad, no es necesario enviarlas en el request porque ya están asociadas en la bdd
+        // Por lo tanto debemos asegurarnos de que primero se cree la propiedad y luego se puedan cargar las imágenes asociadas a la misma
+        // public ICollection<int> ImageIds { get; set; } = new List<int>();
+
+    }
+}

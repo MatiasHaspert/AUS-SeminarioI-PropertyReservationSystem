@@ -1,0 +1,101 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3E267B2F-906F-90D0-AE30-1D10622C2BD7}|WebApp\\webapp.esproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\webapp\\src\\shared\\layout\\layout\\layout.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3E267B2F-906F-90D0-AE30-1D10622C2BD7}|WebApp\\webapp.esproj|solutionrelative:webapp\\src\\shared\\layout\\layout\\layout.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E267B2F-906F-90D0-AE30-1D10622C2BD7}|WebApp\\webapp.esproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\webapp\\src\\app\\router\\approuter.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{3E267B2F-906F-90D0-AE30-1D10622C2BD7}|WebApp\\webapp.esproj|solutionrelative:webapp\\src\\app\\router\\approuter.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29679FC2-AE78-49FC-86BC-2927A879BE64}|Application\\Application.csproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\application\\services\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29679FC2-AE78-49FC-86BC-2927A879BE64}|Application\\Application.csproj|solutionrelative:application\\services\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5D50824-49FD-4337-A4B6-7447296DB7CF}|Infrastructure\\Infrastructure.csproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\infrastructure\\repositories\\reservationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5D50824-49FD-4337-A4B6-7447296DB7CF}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\reservationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08F014E6-316C-40D1-B873-E74423B45BA0}|WebApi\\WebApi.csproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\webapi\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08F014E6-316C-40D1-B873-E74423B45BA0}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 163,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Layout.jsx",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\WebApp\\src\\shared\\layout\\Layout\\Layout.jsx",
+              "RelativeDocumentMoniker": "WebApp\\src\\shared\\layout\\Layout\\Layout.jsx",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\WebApp\\src\\shared\\layout\\Layout\\Layout.jsx",
+              "RelativeToolTip": "WebApp\\src\\shared\\layout\\Layout\\Layout.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-05-13T01:36:17.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AppRouter.jsx",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\WebApp\\src\\app\\router\\AppRouter.jsx",
+              "RelativeDocumentMoniker": "WebApp\\src\\app\\router\\AppRouter.jsx",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\WebApp\\src\\app\\router\\AppRouter.jsx",
+              "RelativeToolTip": "WebApp\\src\\app\\router\\AppRouter.jsx",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-05-13T01:36:01.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReservationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Infrastructure\\Repositories\\ReservationRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\ReservationRepository.cs",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Infrastructure\\Repositories\\ReservationRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\ReservationRepository.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAjwB4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-09T23:17:01.674Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReservationService.cs",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Application\\Services\\ReservationService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\ReservationService.cs",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Application\\Services\\ReservationService.cs",
+              "RelativeToolTip": "Application\\Services\\ReservationService.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAYwFkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T23:55:34.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ReservationController.cs",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\WebApi\\Controllers\\ReservationController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\ReservationController.cs",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\WebApi\\Controllers\\ReservationController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\ReservationController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAawCMAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T23:53:56.826Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

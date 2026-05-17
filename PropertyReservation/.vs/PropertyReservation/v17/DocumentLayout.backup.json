@@ -1,0 +1,335 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/PropertyReservationDB/True/SqlTable/dbo.Payment.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29679FC2-AE78-49FC-86BC-2927A879BE64}|Application\\Application.csproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\application\\services\\paymentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29679FC2-AE78-49FC-86BC-2927A879BE64}|Application\\Application.csproj|solutionrelative:application\\services\\paymentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29679FC2-AE78-49FC-86BC-2927A879BE64}|Application\\Application.csproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\application\\profiles\\paymentprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29679FC2-AE78-49FC-86BC-2927A879BE64}|Application\\Application.csproj|solutionrelative:application\\profiles\\paymentprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08F014E6-316C-40D1-B873-E74423B45BA0}|WebApi\\WebApi.csproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\webapi\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08F014E6-316C-40D1-B873-E74423B45BA0}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41446A5-FFD3-4C04-A5B1-BC1210CB461D}|Domain\\Domain.csproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\domain\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F41446A5-FFD3-4C04-A5B1-BC1210CB461D}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5D50824-49FD-4337-A4B6-7447296DB7CF}|Infrastructure\\Infrastructure.csproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\infrastructure\\repositories\\paymentsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5D50824-49FD-4337-A4B6-7447296DB7CF}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\paymentsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41446A5-FFD3-4C04-A5B1-BC1210CB461D}|Domain\\Domain.csproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\domain\\enums\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F41446A5-FFD3-4C04-A5B1-BC1210CB461D}|Domain\\Domain.csproj|solutionrelative:domain\\enums\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41446A5-FFD3-4C04-A5B1-BC1210CB461D}|Domain\\Domain.csproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\domain\\enums\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F41446A5-FFD3-4C04-A5B1-BC1210CB461D}|Domain\\Domain.csproj|solutionrelative:domain\\enums\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5D50824-49FD-4337-A4B6-7447296DB7CF}|Infrastructure\\Infrastructure.csproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\infrastructure\\repositories\\reservationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5D50824-49FD-4337-A4B6-7447296DB7CF}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\reservationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29679FC2-AE78-49FC-86BC-2927A879BE64}|Application\\Application.csproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\application\\services\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29679FC2-AE78-49FC-86BC-2927A879BE64}|Application\\Application.csproj|solutionrelative:application\\services\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29679FC2-AE78-49FC-86BC-2927A879BE64}|Application\\Application.csproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\application\\dtos\\payments\\paymentstatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29679FC2-AE78-49FC-86BC-2927A879BE64}|Application\\Application.csproj|solutionrelative:application\\dtos\\payments\\paymentstatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08F014E6-316C-40D1-B873-E74423B45BA0}|WebApi\\WebApi.csproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\webapi\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08F014E6-316C-40D1-B873-E74423B45BA0}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5D50824-49FD-4337-A4B6-7447296DB7CF}|Infrastructure\\Infrastructure.csproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\infrastructure\\repositories\\propertyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5D50824-49FD-4337-A4B6-7447296DB7CF}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\propertyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5D50824-49FD-4337-A4B6-7447296DB7CF}|Infrastructure\\Infrastructure.csproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\infrastructure\\demodata\\demodataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5D50824-49FD-4337-A4B6-7447296DB7CF}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\demodata\\demodataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C5D50824-49FD-4337-A4B6-7447296DB7CF}|Infrastructure\\Infrastructure.csproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\infrastructure\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C5D50824-49FD-4337-A4B6-7447296DB7CF}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29679FC2-AE78-49FC-86BC-2927A879BE64}|Application\\Application.csproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\application\\services\\propertyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29679FC2-AE78-49FC-86BC-2927A879BE64}|Application\\Application.csproj|solutionrelative:application\\services\\propertyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41446A5-FFD3-4C04-A5B1-BC1210CB461D}|Domain\\Domain.csproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\domain\\entities\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F41446A5-FFD3-4C04-A5B1-BC1210CB461D}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F41446A5-FFD3-4C04-A5B1-BC1210CB461D}|Domain\\Domain.csproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\domain\\entities\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F41446A5-FFD3-4C04-A5B1-BC1210CB461D}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\property.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08F014E6-316C-40D1-B873-E74423B45BA0}|WebApi\\WebApi.csproj|c:\\users\\haspe\\onedrive\\escritorio\\aus-seminarioi\\aus-seminarioi\\v3\\propertyreservation\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08F014E6-316C-40D1-B873-E74423B45BA0}|WebApi\\WebApi.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 163,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "dbo.Payment [Datos]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/PropertyReservationDB/True/SqlTable/dbo.Payment.sql",
+              "ToolTip": "dbo.Payment [Datos]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-01-10T19:39:50.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PaymentStatusDTO.cs",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Application\\DTOs\\Payments\\PaymentStatusDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Payments\\PaymentStatusDTO.cs",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Application\\DTOs\\Payments\\PaymentStatusDTO.cs",
+              "RelativeToolTip": "Application\\DTOs\\Payments\\PaymentStatusDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T19:27:07.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PaymentProfile.cs",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Application\\Profiles\\PaymentProfile.cs",
+              "RelativeDocumentMoniker": "Application\\Profiles\\PaymentProfile.cs",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Application\\Profiles\\PaymentProfile.cs",
+              "RelativeToolTip": "Application\\Profiles\\PaymentProfile.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwDcAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T18:34:18.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DemoDataSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Infrastructure\\DemoData\\DemoDataSeeder.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DemoData\\DemoDataSeeder.cs",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Infrastructure\\DemoData\\DemoDataSeeder.cs",
+              "RelativeToolTip": "Infrastructure\\DemoData\\DemoDataSeeder.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA1wCYAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T00:24:15.617Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Infrastructure\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Context\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Infrastructure\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\Context\\AppDbContext.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAkwBAAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T00:21:04.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Domain\\Entities\\Reservation.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Reservation.cs",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Domain\\Entities\\Reservation.cs",
+              "RelativeToolTip": "Domain\\Entities\\Reservation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T00:19:34.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Property.cs",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Domain\\Entities\\Property.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Property.cs",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Domain\\Entities\\Property.cs",
+              "RelativeToolTip": "Domain\\Entities\\Property.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T00:19:11.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ReservationService.cs",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Application\\Services\\ReservationService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\ReservationService.cs",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Application\\Services\\ReservationService.cs",
+              "RelativeToolTip": "Application\\Services\\ReservationService.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAawGcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-10T00:12:45.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PropertyService.cs",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Application\\Services\\PropertyService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\PropertyService.cs",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Application\\Services\\PropertyService.cs",
+              "RelativeToolTip": "Application\\Services\\PropertyService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T00:08:40.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PaymentsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Infrastructure\\Repositories\\PaymentsRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\PaymentsRepository.cs",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Infrastructure\\Repositories\\PaymentsRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\PaymentsRepository.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAcwCMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-02T02:17:14.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PaymentsService.cs",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Application\\Services\\PaymentsService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\PaymentsService.cs",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Application\\Services\\PaymentsService.cs",
+              "RelativeToolTip": "Application\\Services\\PaymentsService.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAwDkAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T19:29:27.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PaymentsController.cs",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\WebApi\\Controllers\\PaymentsController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\PaymentsController.cs",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\WebApi\\Controllers\\PaymentsController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\PaymentsController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAkwBoAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T19:19:12.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PaymentMethod.cs",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Domain\\Enums\\PaymentMethod.cs",
+              "RelativeDocumentMoniker": "Domain\\Enums\\PaymentMethod.cs",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Domain\\Enums\\PaymentMethod.cs",
+              "RelativeToolTip": "Domain\\Enums\\PaymentMethod.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T19:18:13.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Domain\\Entities\\Payment.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Payment.cs",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Domain\\Entities\\Payment.cs",
+              "RelativeToolTip": "Domain\\Entities\\Payment.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAmwA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T19:17:30.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PaymentStatus.cs",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Domain\\Enums\\PaymentStatus.cs",
+              "RelativeDocumentMoniker": "Domain\\Enums\\PaymentStatus.cs",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Domain\\Enums\\PaymentStatus.cs",
+              "RelativeToolTip": "Domain\\Enums\\PaymentStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-25T19:16:26.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\WebApi\\Program.cs",
+              "RelativeToolTip": "WebApi\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB8AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-23T00:07:51.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PropertyRepository.cs",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Infrastructure\\Repositories\\PropertyRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\PropertyRepository.cs",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Infrastructure\\Repositories\\PropertyRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\PropertyRepository.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAAwGcAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T00:53:57.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ReservationRepository.cs",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Infrastructure\\Repositories\\ReservationRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\ReservationRepository.cs",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Infrastructure\\Repositories\\ReservationRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\ReservationRepository.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwDIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T00:15:32.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ReservationController.cs",
+              "DocumentMoniker": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\WebApi\\Controllers\\ReservationController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\ReservationController.cs",
+              "ToolTip": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\WebApi\\Controllers\\ReservationController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\ReservationController.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAwwFMAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T23:18:33.127Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
