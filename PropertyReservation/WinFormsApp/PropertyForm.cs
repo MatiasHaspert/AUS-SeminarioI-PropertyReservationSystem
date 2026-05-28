@@ -13,14 +13,52 @@ namespace WinFormsApp
 {
     public partial class PropertyForm : Form
     {
+        private readonly int? _editingId;
+
         public PropertyForm()
         {
             InitializeComponent();
+            lblFormTitle.Text = "Nueva propiedad";
+            lblFormSubtitle.Text = "Complete los campos obligatorios (marcados con *) y presione Guardar";
+            Text = "Nueva propiedad";
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        // CU-04: modo edición — precarga los datos.
+        public PropertyForm(int propertyId) : this()
         {
+            _editingId = propertyId;
+            lblFormTitle.Text = "Editar propiedad";
+            lblFormSubtitle.Text = $"Modificando la propiedad #{propertyId}";
+            Text = "Editar propiedad";
+            btnSave.Text = "Actualizar";
+            Load += async (_, _) => await LoadForEditAsync();
+        }
 
+        private async Task LoadForEditAsync()
+        {
+            if (_editingId is null) return;
+            try
+            {
+                var detail = await Program.PropertyClient.GetPropertyByIdAsync(_editingId.Value);
+                if (detail == null) return;
+
+                txtTitle.Text = detail.Title;
+                txtDescription.Text = detail.Description;
+                nudNightlyPrice.Value = detail.NightlyPrice;
+                numMaxGuests.Value = detail.MaxGuests;
+                nudBedrooms.Value = detail.Bedrooms;
+                nudBathrooms.Value = detail.Bathrooms;
+                txtCountry.Text = detail.Country;
+                txtState.Text = detail.State;
+                txtCity.Text = detail.City;
+                txtStreetAddress.Text = detail.StreetAddress;
+                txtPostalCode.Text = detail.PostalCode.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se pudo cargar la propiedad: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private async void btnSave_Click(object sender, EventArgs e)
@@ -59,17 +97,24 @@ namespace WinFormsApp
 
             try
             {
-                var result = await Program.PropertyClient.CreatePropertyAsync(dto);
-                if (result != null)
+                if (_editingId.HasValue)
                 {
-                    MessageBox.Show("Propiedad creada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    DialogResult = DialogResult.OK;
-                    Close();
+                    await Program.PropertyClient.UpdatePropertyAsync(_editingId.Value, dto);
+                    MessageBox.Show("Propiedad actualizada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                else
+                {
+                    var result = await Program.PropertyClient.CreatePropertyAsync(dto);
+                    if (result == null) return;
+                    MessageBox.Show("Propiedad creada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                DialogResult = DialogResult.OK;
+                Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al crear la propiedad: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error al guardar la propiedad: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

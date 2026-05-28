@@ -21,12 +21,12 @@ public static class SessionManager
         set
         {
             _jwtToken = value;
-            _claims.Clear();
+            _claims.Clear(); // Limpiar claims anteriores al establecer un nuevo token.
 
             if (!string.IsNullOrEmpty(_jwtToken))
             {
                 var handler = new JwtSecurityTokenHandler();
-                var token = handler.ReadJwtToken(_jwtToken);
+                var token = handler.ReadJwtToken(_jwtToken); // Decodificar el token para extraer los claims publicos.
                 _claims.AddRange(token.Claims);
             }
         }

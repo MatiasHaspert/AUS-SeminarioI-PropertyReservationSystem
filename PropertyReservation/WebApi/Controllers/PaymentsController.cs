@@ -42,7 +42,7 @@ namespace WebApi.Controllers
         }
 
         [HttpGet("{paymentId}/proof")]
-        [Authorize(Roles = "Owner, User")]
+        [Authorize(Roles = "Owner, User, Admin")]
         public async Task<IActionResult> GetProof(Guid paymentId)
         {
             try
@@ -68,15 +68,17 @@ namespace WebApi.Controllers
             }
         }
 
+        // CU-06: Admin ve todos los pagos en revisión; Owner ve solo los de sus propiedades
+        // (el servicio debe discriminar por el rol del usuario actual).
         [HttpGet("underReview")]
-        [Authorize(Roles = "Owner")]
+        [Authorize(Roles = "Owner,Admin")]
         public async Task<ActionResult<List<PendingPaymentListDTO>>> GetPaymentsUnderReview()
         {
             return Ok(await _paymentsService.GetPaymentsUnderReview());
         }
 
         [HttpPatch("{paymentId}/status")]
-        [Authorize(Roles = "Owner")]
+        [Authorize(Roles = "Owner,Admin")]
         public async Task<IActionResult> ChangeStatusPayment(Guid paymentId, [FromQuery] ChangePaymentStatusDTO status)
         {
             try

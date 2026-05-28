@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ApkQ1I7reKs=",
+  "dgSpecHash": "IFdECBsvA5A=",
   "success": true,
-  "projectFilePath": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\WinFormsClient\\WinFormsClient.csproj",
+  "projectFilePath": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI-PropertyReservationSystem\\PropertyReservation\\WinFormsClient\\WinFormsClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\haspe\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\haspe\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

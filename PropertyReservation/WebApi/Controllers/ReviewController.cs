@@ -77,6 +77,22 @@ namespace Backend.Controllers
             }
         }
 
+        // MAQUETA — CU-07: el Administrador puede eliminar una reseña inapropiada.
+        [HttpDelete("{id}")]
+        [Authorize(Policy = "AdminOnly")]
+        public async Task<IActionResult> DeleteReview(int id)
+        {
+            try
+            {
+                await _reviewService.DeleteReviewAsync(id);
+                return NoContent();
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+        }
+
         // POST: api/Review
         // Endpoint protegido para usuarios autenticados donde pueden crear nuevas reseñas
         [HttpPost]

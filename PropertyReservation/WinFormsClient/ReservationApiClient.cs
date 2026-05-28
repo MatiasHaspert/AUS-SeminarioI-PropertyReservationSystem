@@ -55,7 +55,45 @@ public class ReservationApiClient
     }
 
     /// <summary>
-    /// Actualiza el estado de una reserva (para administradores).
+    /// CU-05: listado global para Administrador con filtros opcionales.
+    /// </summary>
+    public async Task<IEnumerable<ReservationResponseDTO>?> GetAllForAdminAsync(
+        string? status = null,
+        int? propertyId = null,
+        int? guestId = null,
+        DateOnly? from = null,
+        DateOnly? to = null)
+    {
+        var parts = new List<string>();
+        if (!string.IsNullOrWhiteSpace(status)) parts.Add($"status={Uri.EscapeDataString(status)}");
+        if (propertyId.HasValue) parts.Add($"propertyId={propertyId}");
+        if (guestId.HasValue) parts.Add($"guestId={guestId}");
+        if (from.HasValue) parts.Add($"from={from:yyyy-MM-dd}");
+        if (to.HasValue) parts.Add($"to={to:yyyy-MM-dd}");
+
+        var url = "api/reservation/admin" + (parts.Count > 0 ? "?" + string.Join("&", parts) : string.Empty);
+        var response = await _httpClient.GetAsync(url);
+        if (response.IsSuccessStatusCode)
+            return await response.Content.ReadFromJsonAsync<IEnumerable<ReservationResponseDTO>>();
+
+        return null;
+    }
+
+    /// <summary>
+    /// Cambia el estado de una reserva (transición sobre la máquina de estados).
+    /// </summary>
+    public async Task<bool> ChangeReservationStatusAsync(int id, ChangeReservationStatusDTO dto)
+    {
+        var response = await _httpClient.PatchAsJsonAsync($"api/reservation/{id}/status", dto);
+        if (response.IsSuccessStatusCode) return true;
+
+        var body = await response.Content.ReadAsStringAsync();
+        var message = string.IsNullOrWhiteSpace(body) ? response.ReasonPhrase ?? "Error" : body;
+        throw new HttpRequestException($"Error {(int)response.StatusCode}: {message}");
+    }
+
+    /// <summary>
+    /// Actualiza el estado de una reserva (DTO legado).
     /// </summary>
     public async Task<bool> UpdateReservationStatusAsync(int id, UpdateReservationStatusDTO statusDto)
     {

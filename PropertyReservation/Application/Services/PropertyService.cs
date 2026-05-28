@@ -121,5 +121,28 @@ namespace Application.Services
 
             await _propertyRepository.UpdateAsync(property);
         }
+
+        // MAQUETA — CU-04
+        public Task<IEnumerable<PropertyListResponseDTO>> GetAllPropertiesIncludingDeletedAsync()
+        {
+            // TODO: usar PropertyRepository con .IgnoreQueryFilters() para incluir IsDeleted=true.
+            throw new NotImplementedException("CU-04: listar todas las propiedades incluyendo las soft-deleted.");
+        }
+
+        // MAQUETA — CU-04
+        public Task HardDeletePropertyAsync(int propertyId)
+        {
+            // TODO: validar que la propiedad no tenga reservas activas
+            // (estados Confirmed, PaymentUploaded, PendingPayment) y luego eliminarla físicamente.
+            throw new NotImplementedException("CU-04: hard-delete de propiedad (Admin).");
+        }
+
+        // MAQUETA — CU-04
+        public Task RestorePropertyAsync(int propertyId)
+        {
+            // TODO: localizar la propiedad con .IgnoreQueryFilters(),
+            // verificar que IsDeleted=true y restaurar (IsDeleted=false).
+            throw new NotImplementedException("CU-04: restaurar propiedad soft-deleted (Admin).");
+        }
     }
 }

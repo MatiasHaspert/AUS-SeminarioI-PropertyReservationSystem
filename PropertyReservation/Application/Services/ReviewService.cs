@@ -93,5 +93,12 @@ namespace Application.Services
             await _reviewRepository.UpdateAsync(review);
         }
 
+        // MAQUETA — CU-07: eliminación de una reseña por parte del Administrador.
+        public Task DeleteReviewAsync(int reviewId)
+        {
+            // TODO: agregar ReviewRepository.DeleteAsync(reviewId) y manejar KeyNotFound si no existe.
+            throw new NotImplementedException("CU-07: eliminar reseña (Admin).");
+        }
+
     }
 }

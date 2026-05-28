@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SV+PcCwuE5g=",
+  "dgSpecHash": "s2qj3kEmryQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI-PropertyReservationSystem\\PropertyReservation\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\haspe\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\haspe\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

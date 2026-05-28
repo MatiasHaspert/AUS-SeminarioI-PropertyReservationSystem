@@ -68,5 +68,10 @@ namespace Infrastructure.Repositories
             return await _context.Reviews
                 .AnyAsync(r => r.UserId == userId && r.PropertyId == propertyId);
         }
+
+        public async Task<int> GetTotalReviews()
+        {
+            return await _context.Reviews.CountAsync();
+        }
     }
 }

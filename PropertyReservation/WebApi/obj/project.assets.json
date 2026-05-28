@@ -9275,11 +9275,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\WebApi\\WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI-PropertyReservationSystem\\PropertyReservation\\WebApi\\WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\WebApi\\WebApi.csproj",
+      "projectPath": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI-PropertyReservationSystem\\PropertyReservation\\WebApi\\WebApi.csproj",
       "packagesPath": "C:\\Users\\haspe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\WebApi\\obj\\",
+      "outputPath": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI-PropertyReservationSystem\\PropertyReservation\\WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -9301,8 +9301,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\Application\\Application.csproj"
+            "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI-PropertyReservationSystem\\PropertyReservation\\Application\\Application.csproj": {
+              "projectPath": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI-PropertyReservationSystem\\PropertyReservation\\Application\\Application.csproj"
             }
           }
         }

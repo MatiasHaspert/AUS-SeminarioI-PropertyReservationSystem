@@ -96,7 +96,29 @@ namespace Backend.Controllers
 
         }
 
-        [Authorize(Roles = "Owner")]
+        // MAQUETA — CU-05: listado global de reservas para Administrador.
+        [Authorize(Policy = "AdminOnly")]
+        [HttpGet("admin")]
+        public async Task<ActionResult<IEnumerable<ReservationResponseDTO>>> GetAllReservationsForAdmin(
+            [FromQuery] string? status,
+            [FromQuery] int? propertyId,
+            [FromQuery] int? guestId,
+            [FromQuery] DateOnly? from,
+            [FromQuery] DateOnly? to)
+        {
+            try
+            {
+                var reservations = await _reservationService.GetAllReservationsForAdminAsync(status, propertyId, guestId, from, to);
+                return Ok(reservations);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        // CU-05: ampliado a Admin (además del Owner dueño del recurso).
+        [Authorize(Roles = "Owner,Admin")]
         [HttpPatch("{id}/status")]
         public async Task<IActionResult> ChangeReservationStatus(int id, [FromBody] ChangeReservationStatusDTO dto)
         {
@@ -123,7 +145,8 @@ namespace Backend.Controllers
             }
         }
 
-        [Authorize(Roles = "Owner, User")]
+        // CU-05: ampliado a Admin para consulta del detalle de cualquier reserva.
+        [Authorize(Roles = "Owner, User, Admin")]
         [HttpGet("{reservationId}")]
         public async Task<ReservationResponseDTO> getReservationById(int reservationId)
         {

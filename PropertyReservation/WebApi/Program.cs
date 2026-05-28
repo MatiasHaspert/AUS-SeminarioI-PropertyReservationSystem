@@ -49,6 +49,10 @@ builder.Services.AddScoped<PaymentsService>();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<CurrentUserService>();
 
+// MAQUETAS — servicios para los casos de uso del Administrador (CU-03 y CU-09)
+builder.Services.AddScoped<UserManagementService>();
+builder.Services.AddScoped<AdminStatsService>();
+
 // Configurar Swagger para JWT Authentication   
 builder.Services.AddSwaggerGen(options =>
 {

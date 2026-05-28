@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260505014231_RemoveAcceptedStatus")]
-    partial class RemoveAcceptedStatus
+    [Migration("20260517215220_actua")]
+    partial class actua
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -373,9 +373,15 @@ namespace Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -431,7 +437,7 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("Domain.Entities.Property", b =>
                 {
                     b.HasOne("Domain.Entities.User", "Owner")
-                        .WithMany()
+                        .WithMany("Properties")
                         .HasForeignKey("OwnerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -589,6 +595,8 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.User", b =>
                 {
+                    b.Navigation("Properties");
+
                     b.Navigation("Reservations");
 
                     b.Navigation("Reviews");

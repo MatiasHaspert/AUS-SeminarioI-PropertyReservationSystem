@@ -4,8 +4,10 @@ namespace WinFormsApp
 {
     internal static class Program
     {
+        // HttpClient compartido para todas las API clients.
         private static readonly HttpClient httpClient = new HttpClient(new AuthenticationHandler
         {
+            // Encargado de agregar el token JWT a cada solicitud después de un login exitoso.
             InnerHandler = new HttpClientHandler()
         })
         {
@@ -19,6 +21,9 @@ namespace WinFormsApp
         public static ReviewApiClient ReviewClient { get; private set; } = null!;
         public static PropertyAvailabilityApiClient PropertyAvailabilityClient { get; private set; } = null!;
         public static PropertyImageApiClient PropertyImageClient { get; private set; } = null!;
+        public static UsersApiClient UsersClient { get; private set; } = null!;
+        public static PaymentsApiClient PaymentsClient { get; private set; } = null!;
+        public static AdminApiClient AdminClient { get; private set; } = null!;
 
         /// <summary>
         ///  The main entry point for the application.
@@ -27,19 +32,26 @@ namespace WinFormsApp
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            
             InitializeApiClients();
 
-            using var loginForm = new LoginForm();
-            if (loginForm.ShowDialog() == DialogResult.OK)
+            // Bucle login → dashboard → logout. Permite reingresar sin reiniciar el proceso.
+            while (true)
             {
-                System.Windows.Forms.Application.Run(new PropertyListForm());
+                using var loginForm = new LoginForm();
+                if (loginForm.ShowDialog() != DialogResult.OK) break;
+
+                using var dashboard = new DashboardForm();
+                var result = dashboard.ShowDialog();
+
+                // Si el usuario cerró sesión (DialogResult.Abort), volver al login.
+                if (result == DialogResult.Abort) continue;
+
+                break;
             }
         }
 
         private static void InitializeApiClients()
         {
-            // Crear los clientes API usando el mismo HttpClient
             AuthClient = new AuthApiClient(httpClient);
             PropertyClient = new PropertyApiClient(httpClient);
             ReservationClient = new ReservationApiClient(httpClient);
@@ -47,6 +59,9 @@ namespace WinFormsApp
             ReviewClient = new ReviewApiClient(httpClient);
             PropertyAvailabilityClient = new PropertyAvailabilityApiClient(httpClient);
             PropertyImageClient = new PropertyImageApiClient(httpClient);
+            UsersClient = new UsersApiClient(httpClient);
+            PaymentsClient = new PaymentsApiClient(httpClient);
+            AdminClient = new AdminApiClient(httpClient);
         }
     }
 }

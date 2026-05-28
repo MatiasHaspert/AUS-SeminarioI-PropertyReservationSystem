@@ -69,5 +69,18 @@ namespace Infrastructure.Repositories
                                  .ToListAsync();
         }
 
+        public async Task<Dictionary<string, int>> GetReservationsGroupedByStatusAsync()
+        {
+            return await _context.Reservations
+                                 .GroupBy(r => r.Status.ToString())
+                                 .ToDictionaryAsync(x => x.Key, x => x.Count());
+        }
+
+        public async Task<decimal> GetTotalRevenueAsync()
+        {
+            return await _context.Reservations
+                .Where(r => r.Status == Domain.Enums.ReservationStatus.Completed)
+                .SumAsync(r => r.TotalPrice);
+        }
     }
 }

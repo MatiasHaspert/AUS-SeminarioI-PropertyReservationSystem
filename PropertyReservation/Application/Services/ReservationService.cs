@@ -164,5 +164,18 @@ namespace Application.Services
             var reservations = await _reservationRepository.GetByOwnerIdAsync(ownerId);
             return _mapper.Map<IEnumerable<ReservationResponseDTO>>(reservations);
         }
+
+        // MAQUETA — CU-05: listado global filtrable para el Administrador.
+        public Task<IEnumerable<ReservationResponseDTO>> GetAllReservationsForAdminAsync(
+            string? status,
+            int? propertyId,
+            int? guestId,
+            DateOnly? from,
+            DateOnly? to)
+        {
+            // TODO: agregar en ReservationRepository un método GetAllAsync con filtros opcionales
+            // (Status, PropertyId, GuestId, rango de fechas) y mapear el resultado.
+            throw new NotImplementedException("CU-05: listado global de reservas para Administrador.");
+        }
     }
 }

@@ -1,5 +1,4 @@
 using Domain.Entities;
-using Domain.Enums;
 using Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,7 +7,7 @@ namespace Infrastructure.Repositories
     public class PropertyRepository
     {
         private readonly AppDbContext _context;
-
+        public record TopProperty (int PropertyId, string Title, int ReservationsCount);
         public PropertyRepository(AppDbContext context)
         {
             _context = context;
@@ -113,6 +112,27 @@ namespace Infrastructure.Repositories
             return await _context.Properties
                 .Include(p => p.Reservations)
                 .FirstOrDefaultAsync(p => p.Id == propertyId);
+        }
+
+        public async Task<int> GetTotalProperties()
+        {
+            return await _context.Properties.CountAsync();
+        }
+
+        public async Task<List<TopProperty>> GetTopPropertiesAsync()
+        {
+            return await _context.Properties
+                // Primero ordenamos en base al conteo de la relación (EF lo traduce a un COUNT en SQL)
+                .OrderByDescending(p => p.Reservations.Count())
+                // Tomamos los 5 primeros en la base de datos
+                .Take(5)
+                // Finalmente proyectamos al Record
+                .Select(p => new TopProperty(
+                    p.Id,
+                    p.Title,
+                    p.Reservations.Count()
+                ))
+                .ToListAsync();
         }
     }
 }

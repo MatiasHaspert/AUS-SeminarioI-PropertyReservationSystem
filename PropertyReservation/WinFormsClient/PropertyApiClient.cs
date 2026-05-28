@@ -17,12 +17,13 @@ public class PropertyApiClient
     }
 
     /// <summary>
-    /// Obtiene todas las propiedades.
+    /// Obtiene todas las propiedades. Si includeDeleted=true incluye las soft-deleted (solo Admin).
     /// </summary>
-    public async Task<IEnumerable<PropertyListResponseDTO>?> GetPropertiesAsync()
+    public async Task<IEnumerable<PropertyListResponseDTO>?> GetPropertiesAsync(bool includeDeleted = false)
     {
-        var response = await _httpClient.GetAsync("api/property");
-        
+        var url = "api/property" + (includeDeleted ? "?includeDeleted=true" : string.Empty);
+        var response = await _httpClient.GetAsync(url);
+
         if (response.IsSuccessStatusCode)
         {
             return await response.Content.ReadFromJsonAsync<IEnumerable<PropertyListResponseDTO>>();
@@ -72,7 +73,37 @@ public class PropertyApiClient
     public async Task<bool> UpdatePropertyAsync(int id, PropertyRequestDTO propertyDto)
     {
         var response = await _httpClient.PutAsJsonAsync($"api/property/{id}", propertyDto);
-        return response.IsSuccessStatusCode;
+        if (response.IsSuccessStatusCode) return true;
+
+        var body = await response.Content.ReadAsStringAsync();
+        var message = string.IsNullOrWhiteSpace(body) ? response.ReasonPhrase ?? "Error" : body;
+        throw new HttpRequestException($"Error {(int)response.StatusCode}: {message}");
     }
 
+    /// <summary>
+    /// CU-04: elimina la propiedad. Si hard=true se elimina físicamente (solo Admin).
+    /// </summary>
+    public async Task<bool> DeletePropertyAsync(int id, bool hard = false)
+    {
+        var url = $"api/property/{id}" + (hard ? "?hard=true" : string.Empty);
+        var response = await _httpClient.DeleteAsync(url);
+        if (response.IsSuccessStatusCode) return true;
+
+        var body = await response.Content.ReadAsStringAsync();
+        var message = string.IsNullOrWhiteSpace(body) ? response.ReasonPhrase ?? "Error" : body;
+        throw new HttpRequestException($"Error {(int)response.StatusCode}: {message}");
+    }
+
+    /// <summary>
+    /// CU-04: restaura una propiedad soft-deleted (Admin).
+    /// </summary>
+    public async Task<bool> RestorePropertyAsync(int id)
+    {
+        var response = await _httpClient.PostAsync($"api/property/{id}/restore", content: null);
+        if (response.IsSuccessStatusCode) return true;
+
+        var body = await response.Content.ReadAsStringAsync();
+        var message = string.IsNullOrWhiteSpace(body) ? response.ReasonPhrase ?? "Error" : body;
+        throw new HttpRequestException($"Error {(int)response.StatusCode}: {message}");
+    }
 }

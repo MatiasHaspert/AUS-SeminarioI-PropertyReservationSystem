@@ -69,5 +69,11 @@ namespace Infrastructure.Repositories
                 .AnyAsync(p => p.ReservationId == reservationId &&
                                (p.Status == PaymentStatus.Approved || p.Status == PaymentStatus.UnderReview));
         }
+
+        public async Task<int> GetPendingPaymentsCountAsync()
+        {
+            return await _context.Payment
+                .CountAsync(p => p.Status == PaymentStatus.UnderReview);
+        }
     }
 }

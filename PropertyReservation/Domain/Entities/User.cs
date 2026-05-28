@@ -30,8 +30,14 @@ namespace Domain.Entities
         [Required]
         public Role Role { get; set; } = Role.User;
 
+        // Bandera de habilitación. Un usuario deshabilitado no puede iniciar sesión.
+        public bool IsActive { get; set; } = true;
+
+        // Fecha de alta para mostrar en grilla y estadísticas de la app de escritorio.
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
         // Navigation properties
-        // public ICollection<Property> Properties { get; set; } = new List<Property>();
+        public ICollection<Property> Properties { get; set; } = new List<Property>();
         public ICollection<Review> Reviews { get; set; } = new List<Review>();
         public ICollection<Reservation> Reservations { get; set; } = new List<Reservation>();
     }

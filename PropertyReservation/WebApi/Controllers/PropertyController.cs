@@ -33,11 +33,25 @@ namespace Backend.Controllers
 
         }
 
-        // Endpoint publico para obtener todas las propiedades
+        // Endpoint publico para obtener todas las propiedades.
+        // MAQUETA — CU-04: si llega ?includeDeleted=true y el usuario es Admin,
+        // se deben devolver también las propiedades con IsDeleted=true.
         [AllowAnonymous]
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<PropertyListResponseDTO>>> GetProperties()
+        public async Task<ActionResult<IEnumerable<PropertyListResponseDTO>>> GetProperties(
+            [FromQuery] bool includeDeleted = false)
         {
+            if (includeDeleted)
+            {
+                if (!User.IsInRole("Admin"))
+                {
+                    return Forbid();
+                }
+
+                var all = await _PropertyService.GetAllPropertiesIncludingDeletedAsync();
+                return Ok(all);
+            }
+
             var properties = await _PropertyService.GetPropertiesAsync();
             return Ok(properties);
         }
@@ -57,9 +71,10 @@ namespace Backend.Controllers
             return property;
         }
 
-        // Endpoint protegido para que un owner pueda actualizar una propiedad suya por su id
+        // Endpoint protegido para que un owner pueda actualizar una propiedad suya por su id.
+        // CU-04: ampliado para que un Admin también pueda editar cualquier propiedad.
         [HttpPut("{id}")]
-        [Authorize(Roles = "Owner")]
+        [Authorize(Roles = "Owner,Admin")]
         public async Task<IActionResult> PutProperty(int id, [FromBody] PropertyRequestDTO property)
         {
             try
@@ -106,12 +121,24 @@ namespace Backend.Controllers
             return Ok(properties);
         }
 
+        // CU-04: soft-delete (Owner o Admin) o hard-delete (solo Admin si ?hard=true).
         [HttpDelete("{propertyId}")]
-        [Authorize(Roles = "Owner")]
-        public async Task<IActionResult> DeleteSafeProperty(int propertyId)
+        [Authorize(Roles = "Owner,Admin")]
+        public async Task<IActionResult> DeleteSafeProperty(int propertyId, [FromQuery] bool hard = false)
         {
             try
             {
+                if (hard)
+                {
+                    if (!User.IsInRole("Admin"))
+                    {
+                        return Forbid();
+                    }
+
+                    await _PropertyService.HardDeletePropertyAsync(propertyId);
+                    return NoContent();
+                }
+
                 await _PropertyService.DeleteSafePropertyAsync(propertyId);
                 return NoContent();
             }
@@ -122,6 +149,26 @@ namespace Backend.Controllers
             catch (UnauthorizedAccessException ex)
             {
                 return Forbid(ex.Message);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        // MAQUETA — CU-04: restaurar una propiedad eliminada lógicamente (IsDeleted = true → false).
+        [HttpPost("{propertyId}/restore")]
+        [Authorize(Policy = "AdminOnly")]
+        public async Task<IActionResult> RestoreProperty(int propertyId)
+        {
+            try
+            {
+                await _PropertyService.RestorePropertyAsync(propertyId);
+                return NoContent();
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
             }
             catch (InvalidOperationException ex)
             {

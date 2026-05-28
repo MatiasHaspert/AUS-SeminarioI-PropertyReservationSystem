@@ -1,6 +1,7 @@
 using Domain.Entities;
 using Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
+using Domain.Enums;
 
 namespace Infrastructure.Repositories
 {
@@ -48,15 +49,42 @@ namespace Infrastructure.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<User>> GetAllAsync()
+        public async Task<Dictionary<string, int>> GetUsersGroupedByRolAsync()
         {
-            return await _context.Users.ToListAsync();
+            return await _context.Users
+                .GroupBy(u => u.Role.ToString())
+                .ToDictionaryAsync(g => g.Key, g => g.ToList().Count());
         }
 
         public async Task<bool> ExistsAsync (int propertyId)
         {
             return await _context.Users.AnyAsync(u => u.Id == propertyId);
 
+        }
+
+        public async Task<IEnumerable<User>> GetByEmailOrRolOrActive(string? emailFilter, string? roleFilter, bool? isActiveFilter)
+        {
+            IQueryable<User> query = _context.Users;
+
+            if (!string.IsNullOrWhiteSpace(emailFilter))
+            {
+                // Usa u.Email == emailFilter para buscar una coincidencia exacta
+                // StartsWith es equivalente a un "LIKE 'emailFilter%'"
+                query = query.Where(u => u.Email.StartsWith(emailFilter));
+            }
+
+            // Filtro de Rol: Conversión previa para evitar problemas de comparación directa con el enum
+            if (!string.IsNullOrWhiteSpace(roleFilter) && Enum.TryParse(roleFilter, true, out Role parsedRole))
+            {
+                query = query.Where(u => u.Role == parsedRole);
+            }
+
+            if (isActiveFilter.HasValue)
+            {
+                query = query.Where(u => u.IsActive == isActiveFilter.Value);
+            }
+
+            return await query.ToListAsync();
         }
     }
 }

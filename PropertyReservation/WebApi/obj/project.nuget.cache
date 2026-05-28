@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0/VzoJehPC0=",
+  "dgSpecHash": "dYFZprkkwSg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI\\AUS-SeminarioI\\v3\\PropertyReservation\\WebApi\\WebApi.csproj",
+  "projectFilePath": "C:\\Users\\haspe\\OneDrive\\Escritorio\\AUS-SeminarioI-PropertyReservationSystem\\PropertyReservation\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\haspe\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\haspe\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
